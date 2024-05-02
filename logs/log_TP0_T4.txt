@@ -1,0 +1,91 @@
+===============================================================
+           Sistemas Distribuídos Prof. Elias
+          LOG do Trabalho Prático 0, Tarefa 4
+      Digitar, compilar e executar o programa tempo.c
+   Este programa foi executado para: N=8 processos.
+           Tempo Total de Simulação = 100
+===============================================================
+************************
+Processo 0: estou testando no tempo 30.0
+Processo 00 testa Processo 01 no tempo 30.0-> Processo 00 vetor de estados: [-1 0 -1 -1 -1 -1 -1 -1  ]
+************************
+Processo 1: estou testando no tempo 30.0
+Processo 01 testa Processo 02 no tempo 30.0-> Processo 01 vetor de estados: [-1 -1 0 -1 -1 -1 -1 -1  ]
+************************
+Processo 2: estou testando no tempo 30.0
+Processo 02 testa Processo 03 no tempo 30.0-> Processo 02 vetor de estados: [-1 -1 -1 0 -1 -1 -1 -1  ]
+************************
+Processo 3: estou testando no tempo 30.0
+Processo 03 testa Processo 04 no tempo 30.0-> Processo 03 vetor de estados: [-1 -1 -1 -1 0 -1 -1 -1  ]
+************************
+Processo 4: estou testando no tempo 30.0
+Processo 04 testa Processo 05 no tempo 30.0-> Processo 04 vetor de estados: [-1 -1 -1 -1 -1 0 -1 -1  ]
+************************
+Processo 5: estou testando no tempo 30.0
+Processo 05 testa Processo 06 no tempo 30.0-> Processo 05 vetor de estados: [-1 -1 -1 -1 -1 -1 0 -1  ]
+************************
+Processo 6: estou testando no tempo 30.0
+Processo 06 testa Processo 07 no tempo 30.0-> Processo 06 vetor de estados: [-1 -1 -1 -1 -1 -1 -1 0  ]
+************************
+Processo 7: estou testando no tempo 30.0
+Processo 07 testa Processo 00 no tempo 30.0-> Processo 07 vetor de estados: [0 0 -1 -1 -1 -1 -1 -1  ]
+Socooorro!!! Sou o processo 3  e estou falhando no tempo 31.0
+Socooorro!!! Sou o processo 4  e estou falhando no tempo 31.0
+Socooorro!!! Sou o processo 5  e estou falhando no tempo 40.0
+Socooorro!!! Sou o processo 0  e estou falhando no tempo 45.0
+************************
+Processo 1: estou testando no tempo 60.0
+Processo 01 testa Processo 02 no tempo 60.0-> Processo 01 vetor de estados: [-1 -1 0 0 -1 -1 -1 -1  ]
+************************
+Processo 2: estou testando no tempo 60.0
+Processo 02 testa Processo 03 -> Processo 03 está falho no tempo: 60.0.
+Processo 02 testa Processo 04 -> Processo 04 está falho no tempo: 60.0.
+Processo 02 testa Processo 05 -> Processo 05 está falho no tempo: 60.0.
+Processo 02 testa Processo 06 no tempo 60.0-> Processo 02 vetor de estados: [-1 -1 -1 1 1 1 0 0  ]
+************************
+Processo 6: estou testando no tempo 60.0
+Processo 06 testa Processo 07 no tempo 60.0-> Processo 06 vetor de estados: [0 0 -1 -1 -1 -1 -1 0  ]
+************************
+Processo 7: estou testando no tempo 60.0
+Processo 07 testa Processo 00 -> Processo 00 está falho no tempo: 60.0.
+Processo 07 testa Processo 01 no tempo 60.0-> Processo 07 vetor de estados: [1 0 0 0 -1 -1 -1 -1  ]
+Viva!!! Sou o processo 3 e acabo de recuperar no tempo 61.0
+Viva!!! Sou o processo 0 e acabo de recuperar no tempo 62.0
+************************
+Processo 3: estou testando no tempo 62.0
+Processo 03 testa Processo 04 -> Processo 04 está falho no tempo: 62.0.
+Processo 03 testa Processo 05 -> Processo 05 está falho no tempo: 62.0.
+Processo 03 testa Processo 06 no tempo 62.0-> Processo 03 vetor de estados: [0 0 -1 -1 1 1 0 0  ]
+************************
+Processo 0: estou testando no tempo 63.0
+Processo 00 testa Processo 01 no tempo 63.0-> Processo 00 vetor de estados: [-1 0 0 0 -1 -1 -1 -1  ]
+Viva!!! Sou o processo 4 e acabo de recuperar no tempo 70.0
+************************
+Processo 4: estou testando no tempo 71.0
+Processo 04 testa Processo 05 -> Processo 05 está falho no tempo: 71.0.
+Processo 04 testa Processo 06 no tempo 71.0-> Processo 04 vetor de estados: [0 0 -1 -1 -1 1 0 0  ]
+Viva!!! Sou o processo 5 e acabo de recuperar no tempo 80.0
+************************
+Processo 5: estou testando no tempo 81.0
+Processo 05 testa Processo 06 no tempo 81.0-> Processo 05 vetor de estados: [0 0 -1 -1 -1 -1 0 0  ]
+************************
+Processo 1: estou testando no tempo 90.0
+Processo 01 testa Processo 02 no tempo 90.0-> Processo 01 vetor de estados: [-1 -1 0 1 1 1 0 0  ]
+************************
+Processo 2: estou testando no tempo 90.0
+Processo 02 testa Processo 03 no tempo 90.0-> Processo 02 vetor de estados: [0 0 -1 0 1 1 0 0  ]
+************************
+Processo 6: estou testando no tempo 90.0
+Processo 06 testa Processo 07 no tempo 90.0-> Processo 06 vetor de estados: [1 0 0 0 -1 -1 -1 0  ]
+************************
+Processo 7: estou testando no tempo 90.0
+Processo 07 testa Processo 00 no tempo 90.0-> Processo 07 vetor de estados: [0 0 0 0 -1 -1 -1 -1  ]
+************************
+Processo 3: estou testando no tempo 92.0
+Processo 03 testa Processo 04 no tempo 92.0-> Processo 03 vetor de estados: [0 0 -1 -1 0 1 0 0  ]
+************************
+Processo 0: estou testando no tempo 93.0
+Processo 00 testa Processo 01 no tempo 93.0-> Processo 00 vetor de estados: [-1 0 0 1 1 1 0 0  ]
+************************
+Processo 4: estou testando no tempo 101.0
+Processo 04 testa Processo 05 no tempo 101.0-> Processo 04 vetor de estados: [0 0 -1 -1 -1 0 0 0  ]

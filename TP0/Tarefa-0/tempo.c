@@ -1,8 +1,8 @@
 /* Autor: Elias P. Duarte Jr.
-   Data da Ãšltima ModificaÃ§Ã£o: 11/abril/2024
-   DescriÃ§Ã£o: Nosso primeiro programa de simulaÃ§Ã£o da disciplina Sistemas DistribuÃ­dos.
-     Vamos simular N processos, cada um conta o â€œtempoâ€ independentemente
-    Um exemplo simples e significativo para captar o â€œespÃ­ritoâ€ da simulaÃ§Ã£o */
+   Data da última modificação: 11/abril/2024
+   Descrição: Nosso primeiro programa de simulação da disciplina Sistemas DistribuÃ­dos.
+     Vamos simular N processos, cada um conta o tempo independentemente
+    Um exemplo simples e significativo para captar o espírito da simulação */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,29 +17,15 @@
 
 typedef struct{ 
    int id;            // identificador de facility do SMPL
-   // outras variÃ¡veis locais dos processos sÃ£o declaradas aqui!
+   // outras variáveis locais dos processos são declaradas aqui!
 } TipoProcesso;
 
 TipoProcesso *processo;
 
-//Método realiza o teste dos processos considerando uma estrutura em anel
-void testNext(TipoProcesso *processos, int n, int tokenID){
-	int next = (tokenID	+ 1) % n; //armazena id do nodo a ser testado
-	int nextStatus = status(processos[next].id); // realiza o teste
-
-	if(nextStatus == 0){ //próximo nó faulty-free
-		printf(" \Processos %02d testa processo %02d no tempo: %4.1f\t\033[0;36;110mProcesso %02d está correto\033[0m.\n", tokenID, next,time(), next);
-	}
-	if(nextStatus == 1){//próximo nó faulty
-		printf("\Processos %02d testa processo %02d no tempo: %4.1f\t\033[0;31;110mProcesso %02d está falho\033[0m.\n", tokenID, next,time(), next);
-	}
-
-}
-
 int main (int argc, char *argv[]) {
    
    static int N,   // número de processos
-            token,  // indica o processo que estÃ¡ executando
+            token,  // indica o processo que está executando
             event, r, i,
             MaxTempoSimulac = 150;
 
@@ -82,7 +68,7 @@ int main (int argc, char *argv[]) {
 
     puts("===============================================================");
     puts("           Sistemas Distribuídos Prof. Elias");
-    puts("          LOG do Trabalho Prático 0, Tarefa 1");
+    puts("          LOG do Trabalho Prático 0, Tarefa 0");
     puts("      Digitar, compilar e executar o programa tempo.c");
     printf("   Este programa foi executado para: N=%d processos.\n", N); 
     printf("           Tempo Total de Simulação = %d\n", MaxTempoSimulac);
@@ -94,8 +80,7 @@ int main (int argc, char *argv[]) {
            case test: 
                 if (status(processo[token].id) !=0) break; // se o processo está falho, não testa!
                 printf("Processo %d: estou testando no tempo %4.1f\n", token, time());
-               testNext(processo, N, token);
-
+                
                 schedule(test, 30.0, token);
                 break;
            case fault:

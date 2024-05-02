@@ -1,0 +1,36 @@
+===============================================================
+           Sistemas Distribuídos Prof. Elias
+          LOG do Trabalho Prático 0, Tarefa 3
+      Digitar, compilar e executar o programa tempo.c
+   Este programa foi executado para: N=8 processos.
+           Tempo Total de Simulação = 55
+===============================================================
+Socooorro!!! Sou o processo 1  e estou falhando no tempo 20.0
+Socooorro!!! Sou o processo 2  e estou falhando no tempo 25.0
+Socooorro!!! Sou o processo 4  e estou falhando no tempo 28.0
+************************
+Processo 0: estou testando no tempo 30.0
+Processo 00 testa Processo 01 -> Processo 01 está falho no tempo: 30.0.
+Processo 00 testa Processo 02 -> Processo 02 está falho no tempo: 30.0.
+time: Processo 00 testa processo 03 -> Processo 03 está correto no tempo: 30.0 
+************************
+Processo 3: estou testando no tempo 30.0
+Processo 03 testa Processo 04 -> Processo 04 está falho no tempo: 30.0.
+time: Processo 03 testa processo 05 -> Processo 05 está correto no tempo: 30.0 
+************************
+Processo 5: estou testando no tempo 30.0
+time: Processo 05 testa processo 06 -> Processo 06 está correto no tempo: 30.0 
+************************
+Processo 6: estou testando no tempo 30.0
+time: Processo 06 testa processo 07 -> Processo 07 está correto no tempo: 30.0 
+************************
+Processo 7: estou testando no tempo 30.0
+time: Processo 07 testa processo 00 -> Processo 00 está correto no tempo: 30.0 
+Viva!!! Sou o processo 1 e acabo de recuperar no tempo 39.0
+************************
+Processo 1: estou testando no tempo 40.0
+Processo 01 testa Processo 02 -> Processo 02 está falho no tempo: 40.0.
+time: Processo 01 testa processo 03 -> Processo 03 está correto no tempo: 40.0 
+************************
+Processo 0: estou testando no tempo 60.0
+time: Processo 00 testa processo 01 -> Processo 01 está correto no tempo: 60.0 
