@@ -25,7 +25,7 @@ TipoProcesso *processo;
 //Método realiza o teste dos processos considerando uma estrutura em anel
 void testProcesses(TipoProcesso *processos, int n, int tokenID){
 // test next process
-int next = (tokenID	+ 1) % n; //armazena id do nodo a ser testado
+int next = (tokenID	+ 1) % n; //armazena id do processo a ser testado
 	int nextStatus = status(processos[next].id); // realiza o teste
 
 	if(nextStatus == 0){ //próximo processo correto

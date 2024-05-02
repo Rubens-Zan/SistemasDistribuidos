@@ -35,7 +35,7 @@ void testProcesses(TipoProcesso *processos, int n, int tokenID)
    int next = (antecessor + 1) % n;
    int nextStatus = -1;
 
-   // Testa-se o próximo nodo enquanto encontra processos com falhas.
+   // Testa-se o próximo processo enquanto encontra processos com falhas.
    while (nextStatus != ESTADO_CORRETO)
    {
       nextStatus = status(processos[next].id);

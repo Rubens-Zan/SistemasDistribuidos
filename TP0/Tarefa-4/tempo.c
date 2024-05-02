@@ -2,7 +2,7 @@
  * Autor: Rubens Laszlo
  * Disciplina: Sistemas Distribuídos
  * Data da última alteração: 08/04/2024
- * Tarefa 3: Cada nodo mantém localmente o vetor state e atualiza seus valores ao testar o nodo (só atualizada entrada corresponde ao nodo em que testou)
+ * Tarefa 3: Cada processo mantém localmente o vetor state e atualiza seus valores ao testar o processo (só atualizada entrada corresponde ao processo em que testou)
  */
 #include <stdio.h>
 #include <stdlib.h>
