@@ -255,20 +255,6 @@ void executeTest(TipoProcesso *processos, int n, int tokenID, bool started, int 
 	}
 }
 
-
-// Obtém detecção a partir do processo j correto
-void getDetection(TipoProcesso *processos, int n, int i, int j)
-{
-	int it;
-	for (it = 0; it < n; it++)
-	{
-		if (processos[j].stateVec[it] > processos[i].stateVec[it]) // Se informação obtida ao testar é mais recente, copia info estado
-		{ 
-			processos[i].stateVec[it] = processos[j].stateVec[it];
-		}
-	}
-}
-
 int main(int argc, char *argv[])
 {
 	static int N, // Número de processos
