@@ -40,21 +40,21 @@ typedef struct
 	int processoIdentificado;
 	int TestRound;
 	int newState;
-	bool diagnosed;
-	int testNumberDiagnosed;
+	bool detected;
+	int testNumberDetected;
 } TipoEvento;
 
 // armazena eventos que devem ocorrer
 typedef struct
 {
-	int type;	 // f para falho e r para recover.
+	int type;	 // Inteiro do tipo do evento
 	real time;	 // momento em que ocorre evento.
 	int process; // processo que sofre event0.
 } TipoAgendaEvento;
 
 // Declaração de métodos
 void executeTest(TipoProcesso *processos, int n, int tokenID, bool started, int roundTest, TipoEvento *newEv);
-void getDiagnosis(TipoProcesso *processos, int n, int i, int j);
+void getDetection(TipoProcesso *processos, int n, int i, int j);
 void getTestingList(TipoProcesso *processos, int n, int i, int s, int *nList);
 bool checkEventFullDetection(TipoProcesso *processos, int n, int eventProcess, int timestamp);
 bool checkProcessStartDetection(TipoProcesso *processos, int n);

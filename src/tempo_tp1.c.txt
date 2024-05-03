@@ -262,7 +262,7 @@ void getDetection(TipoProcesso *processos, int n, int i, int j)
 	int it;
 	for (it = 0; it < n; it++)
 	{
-		if (processos[j].stateVec[it] > processos[i].stateVec[it]) // Se informação obtida ao testar é mais recente, copia info estado
+		if (processos[j].stateVec[it] > processos[i].stateVec[it]) // Se informação obtida ao testar é mais recente, atualiza timestamp
 		{ 
 			processos[i].stateVec[it] = processos[j].stateVec[it];
 		}

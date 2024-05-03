@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
 
    puts("===============================================================");
    puts("           Sistemas Distribuídos Prof. Elias");
-   puts("          LOG do Trabalho Prático 0, Tarefa 3");
+   puts("          LOG do Trabalho Prático 0, Tarefa 2");
    puts("      Digitar, compilar e executar o programa tempo.c");
    printf("   Este programa foi executado para: N=%d processos.\n", N);
    printf("           Tempo Total de Simulação = %d\n", MaxTempoSimulac);
