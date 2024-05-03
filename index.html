@@ -70,31 +70,74 @@
 </div>
 
 <h1>
-    Trabalho 1
+    Trabalho 1: Implementação VCUBE Versão 2
 </h1>
-<div>
-    <h2>
-        Logs:
-    </h2>
-    <a href="logs/log_TP1_8processos.txt" alt="Log da Trabalho-0 Tarefa 0">Log 1, 4 eventos, Trabalho 1</a>
-    <a href="logs/log_TP1_8processos_l2.txt" alt="Log da Trabalho-0 Tarefa 0">Log 2, 6 eventos, Trabalho 1 </a>
-    <a href="logs/log_TP1_8processos_l3.txt" alt="Log da Trabalho-0 Tarefa 0">Log 2, 8 eventos, Trabalho 1 </a>
 
-</div>
 <div>
     <h2>
-        Código fonte: 
+        Código fonte:
     </h2>
     <a href="src/tempo_tp1.c.txt">Código Fonte Trabalho 1</a>
     <div>
         <p>
-            Programa: 
-            Structs utilizadas: 
-            TipoEvento: Tipo do evento, o qual é utilizado para armanezenar informações de um evento.
-            TipoAgendaEvento: Para definição de agendamento de um evento, armazena type(tipo do evento), time(tempo do evento), process (processo que vai ocorrer o evento)
-            TipoProcesso: id (Id do processo), stateVec(vetor a ser alterado conforme fluxo de verificação dos estados dos processos)
+            Programa:
+            <div>
+                Structs utilizadas:
+                <br>- <b>TipoEvento</b>: Tipo do evento, o qual é utilizado para armanezenar informações de um evento.
+                <br>- <b>TipoAgendaEvento</b>: Para definição de agendamento de um evento, armazena type(tipo do evento), time(tempo do
+                evento), process (processo que vai ocorrer o evento)
+                <br>- <b>TipoProcesso</b>: id (Id do processo), stateVec(vetor a ser alterado conforme fluxo de verificação dos estados
+                dos processos)
 
+            </div>
+            <div>
+                <h3>
+                    Fluxo Programa método:
+                </h3>
+                <br> - <b>getTestingList</b>: Responsável por preencher a lista de processos que o processo vai testar, tal que a cada intervalo de testes os logN clusters são testados.
+                <br> Realiza lista de processos a serem testados, tal como modelo de Clusters do VCube abaixo: 
+                <div>
+                    <img style="max-width: 100%;" src="src/image_clustes_vcube.png" />
+                </div>
+                
+                <br> - <b>executeTest</b>: Responsável por executar teste em um processo, ao executar o teste, percorre o vetor stateVec do processo testado para verificar se existe novidade (vl_evento_proc_testador > vl_evento_proc_testado ), caso exista, então copia para a posição do estado devido no processo testador. 
+                <br> Utiliza atributo do TipoEstado para verificar se é o primeiro a detectar (notFirstDetection), caso seja, printa que o estado foi detectado pela primeira vez, para melhor controle de detecção de estados. 
+				<br> Printa cada teste executado pelo processo no padrão: Tempo + Número do Teste + Processo Testador teste Processo Testado + stateVec processo Testador. 
+				<br>Como na evidência: 
+                <div>
+                    <img style="max-width: 100%;" src="src/image_recuperacao.png" />
+                </div>
+                <br>
+                E o resumo da rodada em que houve a detecção completa tal como:<br>
+                <div>
+                    <img style="max-width: 100%;" src="src/image_resumo.png" />
+                    
+                </div>
+                <br>- <b>printStatusVec</b>: Método auxiliar para efetuar print do vetor de estados do processo. 
+                <br> - <b>printLogHeader</b>: Printa informações iniciais do log.
+                <br> - <b>checkProcessStartDetection: </b> Para verificação de inicialização do sistema. 
+                <br> - <b>checkEventFullDetection</b>: Utilizado para detectar que todos os processos detectaram um evento, ao verificar isso, printa Resumo da rodada com informações de qual o evento + Latência (Utilizado n_rodada_evento - n_rodada_detecção_completa ) + Tempo (tempo_atual - tempo_evento )
+                <br> - <b>resetEvent</b>: Método auxiliar para, ao todos detectarem um evento efetua o reset para utilizar a variável. 
+            
+            </div>
         </p>
 
     </div>
+</div>
+<div>
+    <h2>
+        Logs:
+    </h2>
+    <div>
+        <a href="logs/log_TP1_8processos.txt" alt="Log da Trabalho-0 Tarefa 0">Log 1, 4 eventos, Trabalho 1</a>
+    </div>
+
+    <div>
+        <a href="logs/log_TP1_8processos_l2.txt" alt="Log da Trabalho-0 Tarefa 0">Log 2, 6 eventos, Trabalho 1 </a>
+    </div>
+    <div>
+
+        <a href="logs/log_TP1_8processos_l3.txt" alt="Log da Trabalho-0 Tarefa 0">Log 2, 8 eventos, Trabalho 1 </a>
+    </div>
+
 </div>
