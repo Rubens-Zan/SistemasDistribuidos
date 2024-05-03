@@ -1,0 +1,616 @@
+******************************************************************************************************************************************
+Log Algoritmo VCube versão 2 
+Autor: Rubens Laszlo 
+Tempo de simulação: 201.0 segundos
+Número de processos: 8
+Intervalo de testes: 10.0 segundos
+
+Estado dos processos: 
+Estado Desconhecido: -1 
+Estado Correto: 0 
+Estado Falho: 1 
+
+Eventos agendados: 
+Processo 00 falhar no tempo 50.0 
+Processo 03 falhar no tempo 75.0 
+Processo 00 recuperação no tempo 110.0
+Processo 03 recuperação no tempo 140.0
+Processo 05 falhar no tempo 60.0 
+Processo 05 recuperação no tempo 120.0
+Processo 01 falhar no tempo 80.0 
+Processo 01 recuperação no tempo 100.0
+******************************************************************************************************************************************
+
+Tempo 		Número do teste 	Evento de teste 				Status do processo 					 Observação 
+
+************************************************ Início rodada: 01 ************************************************
+Tempo:10.0	N_Teste:001		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  0   0  -1  -1  -1  -1  -1  -1   ]
+Tempo:10.0	N_Teste:002		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  0   0   0  -1  -1  -1  -1  -1   ]
+Tempo:10.0	N_Teste:003		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  0   0   0  -1   0  -1  -1  -1   ]
+Tempo:10.0	N_Teste:004		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  0   0   0  -1   0  -1  -1  -1   ]
+Tempo:10.0	N_Teste:005		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  0   0   0   0   0  -1  -1  -1   ]
+Tempo:10.0	N_Teste:006		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  0   0   0   0   0   0  -1  -1   ]
+Tempo:10.0	N_Teste:007		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  0   0   0  -1   0  -1  -1  -1   ]
+Tempo:10.0	N_Teste:008		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  0   0   0   0   0  -1  -1  -1   ]
+Tempo:10.0	N_Teste:009		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  0   0   0   0   0  -1   0  -1   ]
+Tempo:10.0	N_Teste:010		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  0   0   0   0   0   0  -1  -1   ]
+Tempo:10.0	N_Teste:011		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  0   0   0   0   0   0   0  -1   ]
+Tempo:10.0	N_Teste:012		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:10.0	N_Teste:013		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  0   0   0  -1   0  -1  -1  -1   ]
+Tempo:10.0	N_Teste:014		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  0   0   0  -1   0   0  -1  -1   ]
+Tempo:10.0	N_Teste:015		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  0   0   0  -1   0   0   0  -1   ]
+Tempo:10.0	N_Teste:016		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  0   0   0   0   0   0  -1  -1   ]
+Tempo:10.0	N_Teste:017		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  0   0   0   0   0   0   0  -1   ]
+Tempo:10.0	N_Teste:018		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:10.0	N_Teste:019		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  0   0   0   0   0  -1   0  -1   ]
+Tempo:10.0	N_Teste:020		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  0   0   0   0   0   0   0  -1   ]
+Tempo:10.0	N_Teste:021		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:10.0	N_Teste:022		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:10.0	N_Teste:023		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:10.0	N_Teste:024		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  0   0   0   0   0   0   0   0   ]
+**********************************************Fim da rodada 01 **********************************************
+
+
+************************************************ Início rodada: 02 ************************************************
+Tempo:20.0	N_Teste:025		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  0   0   0   0   0   0  -1  -1   ]
+Tempo:20.0	N_Teste:026		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  0   0   0   0   0   0   0  -1   ]
+Tempo:20.0	N_Teste:027		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  0   0   0   0   0   0   0  -1   ]
+Tempo:20.0	N_Teste:028		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  0   0   0   0   0   0   0  -1   ]
+Tempo:20.0	N_Teste:029		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:030		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:031		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  0   0   0   0   0   0   0  -1   ]
+Tempo:20.0	N_Teste:032		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:033		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:034		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:035		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:036		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:037		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  0   0   0   0   0   0   0  -1   ]
+Tempo:20.0	N_Teste:038		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:039		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:040		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:041		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:042		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:043		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:044		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:045		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:046		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:047		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:20.0	N_Teste:048		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  0   0   0   0   0   0   0   0   ]
+**********************************************Fim da rodada 02 **********************************************
+
+
+************************************************ Início rodada: 03 ************************************************
+Tempo:30.0	N_Teste:049		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:050		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:051		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:052		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:053		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:054		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:055		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:056		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:057		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:058		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:059		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:060		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:061		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:062		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:063		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:064		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:065		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:066		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:067		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:068		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:069		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:070		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:071		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:30.0	N_Teste:072		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  0   0   0   0   0   0   0   0   ]
+**********************************************Fim da rodada 03 **********************************************
+
+
+************************************************ Início rodada: 04 ************************************************
+Tempo:40.0	N_Teste:073		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:074		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:075		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:076		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:077		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:078		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:079		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:080		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:081		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:082		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:083		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:084		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:085		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:086		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:087		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:088		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:089		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:090		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:091		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:092		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:093		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:094		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:095		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  0   0   0   0   0   0   0   0   ]
+Tempo:40.0	N_Teste:096		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  0   0   0   0   0   0   0   0   ]
+**********************************************Fim da rodada 04 **********************************************
+
+ Tempo:50.0			Processo 00 FALHOU.
+
+************************************************ Início rodada: 05 ************************************************
+Tempo:50.0				Processo 00 está falho.
+Tempo:50.0	N_Teste:097		Processo 01 testa processo 00: FALHO.		Processo 01 status: [  1   0   0   0   0   0   0   0   ]	Evento de falha detectado pela primeira vez.
+Tempo:50.0	N_Teste:098		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:099		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:100		Processo 02 testa processo 00: FALHO.		Processo 02 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:101		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:102		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:103		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:104		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:105		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:106		Processo 04 testa processo 00: FALHO.		Processo 04 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:107		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:108		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:109		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:110		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:111		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:112		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:113		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:114		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:115		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  1   0   0   0   0   0   0   0   ]	 Detecção completa evento no processo 0
+Tempo:50.0	N_Teste:116		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:50.0	N_Teste:117		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  1   0   0   0   0   0   0   0   ]
+**********************************************Fim da rodada 05 **********************************************
+
+Resumo rodada de teste:
+	Detecção completa: processo 00 falho.
+	Latência: 01 rodada(s).
+	Tempo de detecção: 50.0 s.
+		Total de testes: 19.
+
+ Tempo:60.0			Processo 05 FALHOU.
+
+************************************************ Início rodada: 06 ************************************************
+Tempo:60.0				Processo 00 está falho.
+Tempo:60.0	N_Teste:118		Processo 01 testa processo 00: FALHO.		Processo 01 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:60.0	N_Teste:119		Processo 01 testa processo 02: CORRETO.		Processo 01 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:60.0	N_Teste:120		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:60.0	N_Teste:121		Processo 01 testa processo 04: CORRETO.		Processo 01 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:60.0	N_Teste:122		Processo 01 testa processo 05: FALHO.		Processo 01 status: [  1   0   0   0   0   1   0   0   ]	Evento de falha detectado pela primeira vez.
+Tempo:60.0	N_Teste:123		Processo 02 testa processo 00: FALHO.		Processo 02 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:60.0	N_Teste:124		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:60.0	N_Teste:125		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:60.0	N_Teste:126		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:60.0	N_Teste:127		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:60.0	N_Teste:128		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:60.0	N_Teste:129		Processo 04 testa processo 00: FALHO.		Processo 04 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:60.0	N_Teste:130		Processo 04 testa processo 05: FALHO.		Processo 04 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:60.0	N_Teste:131		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:60.0				Processo 05 está falho.
+Tempo:60.0	N_Teste:132		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:60.0	N_Teste:133		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:60.0	N_Teste:134		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:60.0	N_Teste:135		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:60.0	N_Teste:136		Processo 07 testa processo 05: FALHO.		Processo 07 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:60.0	N_Teste:137		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  1   0   0   0   0   1   0   0   ]
+**********************************************Fim da rodada 06 **********************************************
+
+
+************************************************ Início rodada: 07 ************************************************
+Tempo:70.0				Processo 00 está falho.
+Tempo:70.0	N_Teste:138		Processo 01 testa processo 00: FALHO.		Processo 01 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:139		Processo 01 testa processo 02: CORRETO.		Processo 01 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:140		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:141		Processo 01 testa processo 04: CORRETO.		Processo 01 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:142		Processo 01 testa processo 05: FALHO.		Processo 01 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:143		Processo 02 testa processo 00: FALHO.		Processo 02 status: [  1   0   0   0   0   0   0   0   ]
+Tempo:70.0	N_Teste:144		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  1   0   0   0   0   1   0   0   ]	 Detecção completa evento no processo 5
+Tempo:70.0	N_Teste:145		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:146		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:147		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:148		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:149		Processo 04 testa processo 00: FALHO.		Processo 04 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:150		Processo 04 testa processo 01: CORRETO.		Processo 04 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:151		Processo 04 testa processo 05: FALHO.		Processo 04 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:152		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:153		Processo 04 testa processo 07: CORRETO.		Processo 04 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0				Processo 05 está falho.
+Tempo:70.0	N_Teste:154		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:155		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:156		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:157		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:158		Processo 07 testa processo 05: FALHO.		Processo 07 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:70.0	N_Teste:159		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  1   0   0   0   0   1   0   0   ]
+**********************************************Fim da rodada 07 **********************************************
+
+Resumo rodada de teste:
+	Detecção completa: processo 05 falho.
+	Latência: 02 rodada(s).
+	Tempo de detecção: 20.0 s.
+		Total de testes: 27.
+
+ Tempo:75.0			Processo 03 FALHOU.
+ Tempo:80.0			Processo 01 FALHOU.
+
+************************************************ Início rodada: 08 ************************************************
+Tempo:80.0				Processo 00 está falho.
+Tempo:80.0				Processo 01 está falho.
+Tempo:80.0	N_Teste:160		Processo 02 testa processo 00: FALHO.		Processo 02 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:80.0	N_Teste:161		Processo 02 testa processo 03: FALHO.		Processo 02 status: [  1   0   0   1   0   1   0   0   ]	Evento de falha detectado pela primeira vez.
+Tempo:80.0	N_Teste:162		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  1   0   0   1   0   1   0   0   ]
+Tempo:80.0				Processo 03 está falho.
+Tempo:80.0	N_Teste:163		Processo 04 testa processo 00: FALHO.		Processo 04 status: [  1   0   0   0   0   1   0   0   ]
+Tempo:80.0	N_Teste:164		Processo 04 testa processo 01: FALHO.		Processo 04 status: [  1   1   0   0   0   1   0   0   ]
+Tempo:80.0	N_Teste:165		Processo 04 testa processo 05: FALHO.		Processo 04 status: [  1   1   0   0   0   1   0   0   ]
+Tempo:80.0	N_Teste:166		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  1   1   0   0   0   1   0   0   ]
+Tempo:80.0	N_Teste:167		Processo 04 testa processo 07: CORRETO.		Processo 04 status: [  1   1   0   0   0   1   0   0   ]
+Tempo:80.0				Processo 05 está falho.
+Tempo:80.0	N_Teste:168		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  1   0   0   1   0   1   0   0   ]
+Tempo:80.0	N_Teste:169		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:80.0	N_Teste:170		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:80.0	N_Teste:171		Processo 07 testa processo 03: FALHO.		Processo 07 status: [  1   0   0   1   0   1   0   0   ]
+Tempo:80.0	N_Teste:172		Processo 07 testa processo 05: FALHO.		Processo 07 status: [  1   0   0   1   0   1   0   0   ]
+Tempo:80.0	N_Teste:173		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  1   1   0   1   0   1   0   0   ]
+**********************************************Fim da rodada 08 **********************************************
+
+
+************************************************ Início rodada: 09 ************************************************
+Tempo:90.0				Processo 00 está falho.
+Tempo:90.0				Processo 01 está falho.
+Tempo:90.0	N_Teste:174		Processo 02 testa processo 00: FALHO.		Processo 02 status: [  1   0   0   1   0   1   0   0   ]
+Tempo:90.0	N_Teste:175		Processo 02 testa processo 01: FALHO.		Processo 02 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:90.0	N_Teste:176		Processo 02 testa processo 03: FALHO.		Processo 02 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:90.0	N_Teste:177		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:90.0	N_Teste:178		Processo 02 testa processo 07: CORRETO.		Processo 02 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:90.0				Processo 03 está falho.
+Tempo:90.0	N_Teste:179		Processo 04 testa processo 00: FALHO.		Processo 04 status: [  1   1   0   0   0   1   0   0   ]
+Tempo:90.0	N_Teste:180		Processo 04 testa processo 01: FALHO.		Processo 04 status: [  1   1   0   0   0   1   0   0   ]
+Tempo:90.0	N_Teste:181		Processo 04 testa processo 05: FALHO.		Processo 04 status: [  1   1   0   0   0   1   0   0   ]
+Tempo:90.0	N_Teste:182		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  1   1   0   1   0   1   0   0   ]	 Detecção completa evento no processo 3
+Tempo:90.0	N_Teste:183		Processo 04 testa processo 07: CORRETO.		Processo 04 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:90.0				Processo 05 está falho.
+Tempo:90.0	N_Teste:184		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:90.0	N_Teste:185		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:90.0	N_Teste:186		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:90.0	N_Teste:187		Processo 07 testa processo 03: FALHO.		Processo 07 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:90.0	N_Teste:188		Processo 07 testa processo 05: FALHO.		Processo 07 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:90.0	N_Teste:189		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  1   1   0   1   0   1   0   0   ]
+**********************************************Fim da rodada 09 **********************************************
+
+Resumo rodada de teste:
+	Detecção completa: processo 03 falho.
+	Latência: 02 rodada(s).
+	Tempo de detecção: 20.0 s.
+		Total de testes: 23.
+
+Tempo: 100.0			Processo 01 recuperado. 			Processo 01 status: [ -1   0  -1  -1  -1  -1  -1  -1   ]
+************************************************ Início rodada: 10 ************************************************
+Tempo:100.0				Processo 00 está falho.
+Tempo:100.0	N_Teste:190		Processo 01 testa processo 00: FALHO.		Processo 01 status: [ -1   0  -1  -1  -1  -1  -1  -1   ]
+Tempo:100.0	N_Teste:191		Processo 01 testa processo 03: FALHO.		Processo 01 status: [ -1   0  -1  -1  -1  -1  -1  -1   ]
+Tempo:100.0	N_Teste:192		Processo 01 testa processo 05: FALHO.		Processo 01 status: [ -1   0  -1  -1  -1  -1  -1  -1   ]
+Tempo:100.0	N_Teste:193		Processo 02 testa processo 00: FALHO.		Processo 02 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:194		Processo 02 testa processo 01: CORRETO.		Processo 02 status: [  1   2   0   1   0   1   0   0   ]	Detectado evento de recuperação pela primeira vez.
+Tempo:100.0	N_Teste:195		Processo 02 testa processo 03: FALHO.		Processo 02 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:196		Processo 02 testa processo 04: CORRETO.		Processo 02 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:197		Processo 02 testa processo 05: FALHO.		Processo 02 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:198		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:199		Processo 02 testa processo 07: CORRETO.		Processo 02 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:100.0				Processo 03 está falho.
+Tempo:100.0	N_Teste:200		Processo 04 testa processo 00: FALHO.		Processo 04 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:201		Processo 04 testa processo 01: CORRETO.		Processo 04 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:202		Processo 04 testa processo 05: FALHO.		Processo 04 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:203		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:204		Processo 04 testa processo 07: CORRETO.		Processo 04 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:100.0				Processo 05 está falho.
+Tempo:100.0	N_Teste:205		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:206		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:207		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:208		Processo 07 testa processo 03: FALHO.		Processo 07 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:209		Processo 07 testa processo 05: FALHO.		Processo 07 status: [  1   1   0   1   0   1   0   0   ]
+Tempo:100.0	N_Teste:210		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  1   2   0   1   0   1   0   0   ]
+**********************************************Fim da rodada 10 **********************************************
+
+Tempo: 110.0			Processo 00 recuperado. 			Processo 00 status: [  0  -1  -1  -1  -1  -1  -1  -1   ]
+************************************************ Início rodada: 11 ************************************************
+Tempo:110.0	N_Teste:211		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  0   0  -1  -1  -1  -1  -1  -1   ]
+Tempo:110.0	N_Teste:212		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:213		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:214		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  1   2   0   1   0   1   0   0   ]	 Detecção completa evento no processo 1
+Tempo:110.0	N_Teste:215		Processo 01 testa processo 03: FALHO.		Processo 01 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:216		Processo 01 testa processo 05: FALHO.		Processo 01 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:217		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:218		Processo 02 testa processo 01: CORRETO.		Processo 02 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:219		Processo 02 testa processo 03: FALHO.		Processo 02 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:220		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:221		Processo 02 testa processo 07: CORRETO.		Processo 02 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:110.0				Processo 03 está falho.
+Tempo:110.0	N_Teste:222		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:223		Processo 04 testa processo 01: CORRETO.		Processo 04 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:224		Processo 04 testa processo 05: FALHO.		Processo 04 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:225		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:226		Processo 04 testa processo 07: CORRETO.		Processo 04 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:110.0				Processo 05 está falho.
+Tempo:110.0	N_Teste:227		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:228		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:229		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:230		Processo 07 testa processo 03: FALHO.		Processo 07 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:231		Processo 07 testa processo 05: FALHO.		Processo 07 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:110.0	N_Teste:232		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  2   2   0   1   0   1   0   0   ]
+**********************************************Fim da rodada 11 **********************************************
+
+Resumo rodada de teste:
+	Detecção completa: processo 01 recuperado.
+	Latência: 02 rodada(s).
+	Tempo de detecção: 20.0 s.
+		Total de testes: 04.
+
+Tempo: 120.0			Processo 05 recuperado. 			Processo 05 status: [ -1  -1  -1  -1  -1   0  -1  -1   ]
+************************************************ Início rodada: 12 ************************************************
+Tempo:120.0	N_Teste:233		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  1   2   0   1   0   1   0   0   ]
+Tempo:120.0	N_Teste:234		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:120.0	N_Teste:235		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:120.0	N_Teste:236		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  2   2   0   1   0   1   0   0   ]	Detectado evento de recuperação pela primeira vez.
+Tempo:120.0	N_Teste:237		Processo 01 testa processo 02: CORRETO.		Processo 01 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:120.0	N_Teste:238		Processo 01 testa processo 03: FALHO.		Processo 01 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:120.0	N_Teste:239		Processo 01 testa processo 04: CORRETO.		Processo 01 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:120.0	N_Teste:240		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:241		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:120.0	N_Teste:242		Processo 02 testa processo 01: CORRETO.		Processo 02 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:243		Processo 02 testa processo 03: FALHO.		Processo 02 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:244		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:245		Processo 02 testa processo 07: CORRETO.		Processo 02 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0				Processo 03 está falho.
+Tempo:120.0	N_Teste:246		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:120.0	N_Teste:247		Processo 04 testa processo 01: CORRETO.		Processo 04 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:248		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:249		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:250		Processo 04 testa processo 07: CORRETO.		Processo 04 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:251		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  2   2   0   1   0   2   0   0   ]	 Detecção completa evento no processo 0
+Tempo:120.0	N_Teste:252		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:253		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:254		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:255		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:256		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:257		Processo 07 testa processo 03: FALHO.		Processo 07 status: [  2   2   0   1   0   1   0   0   ]
+Tempo:120.0	N_Teste:258		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:120.0	N_Teste:259		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  2   2   0   1   0   2   0   0   ]
+**********************************************Fim da rodada 12 **********************************************
+
+Resumo rodada de teste:
+	Detecção completa: processo 00 recuperado.
+	Latência: 01 rodada(s).
+	Tempo de detecção: 10.0 s.
+		Total de testes: 19.
+
+
+************************************************ Início rodada: 13 ************************************************
+Tempo:130.0	N_Teste:260		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:261		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:262		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:263		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:264		Processo 01 testa processo 03: FALHO.		Processo 01 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:265		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:266		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:267		Processo 02 testa processo 01: CORRETO.		Processo 02 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:268		Processo 02 testa processo 03: FALHO.		Processo 02 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:269		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:270		Processo 02 testa processo 07: CORRETO.		Processo 02 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0				Processo 03 está falho.
+Tempo:130.0	N_Teste:271		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:272		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:273		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:274		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:275		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:276		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:277		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:278		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:279		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:280		Processo 07 testa processo 03: FALHO.		Processo 07 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:281		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:130.0	N_Teste:282		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  2   2   0   1   0   2   0   0   ]
+**********************************************Fim da rodada 13 **********************************************
+
+Tempo: 140.0			Processo 03 recuperado. 			Processo 03 status: [ -1  -1  -1   0  -1  -1  -1  -1   ]
+************************************************ Início rodada: 14 ************************************************
+Tempo:140.0	N_Teste:283		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:140.0	N_Teste:284		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:140.0	N_Teste:285		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:140.0	N_Teste:286		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:140.0	N_Teste:287		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]	Detectado evento de recuperação pela primeira vez.
+Tempo:140.0	N_Teste:288		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:289		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:140.0	N_Teste:290		Processo 02 testa processo 01: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:291		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:292		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:293		Processo 02 testa processo 07: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:294		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:295		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:296		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:297		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:140.0	N_Teste:298		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:140.0	N_Teste:299		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  2   2   0   1   0   2   0   0   ]
+Tempo:140.0	N_Teste:300		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:301		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:302		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:303		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:304		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:305		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:306		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:307		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:140.0	N_Teste:308		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+**********************************************Fim da rodada 14 **********************************************
+
+
+************************************************ Início rodada: 15 ************************************************
+Tempo:150.0	N_Teste:309		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:310		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:311		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:312		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:313		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:314		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:315		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:316		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:317		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:318		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:319		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:320		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:321		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]	 Detecção completa evento no processo 3
+Tempo:150.0	N_Teste:322		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:323		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:324		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:325		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:326		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:327		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:328		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:329		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:330		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:331		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:150.0	N_Teste:332		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+**********************************************Fim da rodada 15 **********************************************
+
+Resumo rodada de teste:
+	Detecção completa: processo 03 recuperado.
+	Latência: 02 rodada(s).
+	Tempo de detecção: 30.0 s.
+		Total de testes: 39.
+
+
+************************************************ Início rodada: 16 ************************************************
+Tempo:160.0	N_Teste:333		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:334		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:335		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:336		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:337		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:338		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:339		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:340		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:341		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:342		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:343		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:344		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:345		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:346		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:347		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:348		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:349		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:350		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:351		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:352		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:353		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:354		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:355		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:160.0	N_Teste:356		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+**********************************************Fim da rodada 16 **********************************************
+
+
+************************************************ Início rodada: 17 ************************************************
+Tempo:170.0	N_Teste:357		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:358		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:359		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:360		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:361		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:362		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:363		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:364		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:365		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:366		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:367		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:368		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:369		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:370		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:371		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:372		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:373		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:374		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:375		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:376		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:377		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:378		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:379		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:170.0	N_Teste:380		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+**********************************************Fim da rodada 17 **********************************************
+
+
+************************************************ Início rodada: 18 ************************************************
+Tempo:180.0	N_Teste:381		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:382		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:383		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:384		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:385		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:386		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:387		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:388		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:389		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:390		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:391		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:392		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:393		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:394		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:395		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:396		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:397		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:398		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:399		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:400		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:401		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:402		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:403		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:180.0	N_Teste:404		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+**********************************************Fim da rodada 18 **********************************************
+
+
+************************************************ Início rodada: 19 ************************************************
+Tempo:190.0	N_Teste:405		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:406		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:407		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:408		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:409		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:410		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:411		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:412		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:413		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:414		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:415		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:416		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:417		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:418		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:419		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:420		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:421		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:422		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:423		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:424		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:425		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:426		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:427		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:190.0	N_Teste:428		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+**********************************************Fim da rodada 19 **********************************************
+
+
+************************************************ Início rodada: 20 ************************************************
+Tempo:200.0	N_Teste:429		Processo 00 testa processo 01: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:430		Processo 00 testa processo 02: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:431		Processo 00 testa processo 04: CORRETO.		Processo 00 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:432		Processo 01 testa processo 00: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:433		Processo 01 testa processo 03: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:434		Processo 01 testa processo 05: CORRETO.		Processo 01 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:435		Processo 02 testa processo 00: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:436		Processo 02 testa processo 03: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:437		Processo 02 testa processo 06: CORRETO.		Processo 02 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:438		Processo 03 testa processo 01: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:439		Processo 03 testa processo 02: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:440		Processo 03 testa processo 07: CORRETO.		Processo 03 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:441		Processo 04 testa processo 00: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:442		Processo 04 testa processo 05: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:443		Processo 04 testa processo 06: CORRETO.		Processo 04 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:444		Processo 05 testa processo 01: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:445		Processo 05 testa processo 04: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:446		Processo 05 testa processo 07: CORRETO.		Processo 05 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:447		Processo 06 testa processo 02: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:448		Processo 06 testa processo 04: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:449		Processo 06 testa processo 07: CORRETO.		Processo 06 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:450		Processo 07 testa processo 03: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:451		Processo 07 testa processo 05: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+Tempo:200.0	N_Teste:452		Processo 07 testa processo 06: CORRETO.		Processo 07 status: [  2   2   0   2   0   2   0   0   ]
+**********************************************Fim da rodada 20 **********************************************
+
