@@ -9,93 +9,37 @@
 #include "smpl.h"
 #include <stdbool.h>
 #include "cisj.c"
+#include "tempo.h"
 
-#define simulationTime 201.0 // tempo de duração da simulação
-#define interval 10.0		 // intervalo de testes
-
-// Eventos
-#define TEST 1
-#define FAULT 2
-#define REPAIR 3
-
-#define FAULT_TYPE 4
-#define REPAIR_TYPE 5
-
-#define UNKNOWN_STATE -1
-#define FAIL_STATE 1
-#define CORRECT_STATE 1
-
-
-/* descritor do processo */
-typedef struct
-{
-	int id;
-	int *timestamp;
-} TipoProcesso;
-
-TipoProcesso *processo;
-
-// utilizado para armanezenar informações de um evento e ser possível imprimir na tela.
-typedef struct
-{
-	bool novoEvento;
-	bool detectado;
-	float initTime;
-	bool impresso;
-	int processoIdentificador;
-	int processoIdentificado;
-	int TestRound;
-	int novoEstado;
-	bool diagnosed;
-	int testNumberDiagnosed;
-} TipoEvento;
-
-// armazena eventos que devem ocorrer
-typedef struct
-{
-	int type;	 // f para falho e r para recover.
-	real time;	 // momento em que ocorre evento.
-	int process; // processo que sofre event0.
-} TipoAgendaEvento;
-
-int testnumber = 1;		 // armazena número do teste realizado
-int eventTestnumber = 0; // armazena o identificado do teste no momento em que um evento é diagnosticado
-
-// Declaração de métodos
-void executeTest(TipoProcesso *processos, int n, int tokenID, bool started, int roundTest, TipoEvento *newEv);
-void printStatus(TipoProcesso *processos, int n, int tokenID);
-void printLogIntro(int n, TipoAgendaEvento *eventos, int numEventos);
-
-void getDiagnosisInfo(TipoProcesso *processos, int n, int i, int j);
-void whoIShouldTest(TipoProcesso *processos, int n, int i, int s, int *nList);
-bool checkEventDiagnosed(TipoProcesso *processos, int n, int eventProcess, int timestamp);
-bool checkProcessStartDiagnosed(TipoProcesso *processos, int n);
-void restartEvent(TipoEvento *newEv);
+// armazena número do teste realizado
+int testnumber = 1;		 
+// Ao detectar um evento, armazena o identificador do teste 
+int eventTestnumber = 0; 
 
 // reinicia/inicia váriavel que armazena informações sobre um evento
-void restartEvent(TipoEvento *newEv)
+void resetEvent(TipoEvento *newEv)
 {
 	newEv->novoEvento = false;
 	newEv->detectado = false;
-	newEv->impresso = false;
+	newEv->notFirstDetection = false;
 	newEv->processoIdentificador = UNKNOWN_STATE;
 	newEv->processoIdentificado = UNKNOWN_STATE;
 	newEv->TestRound = UNKNOWN_STATE;
-	newEv->novoEstado = UNKNOWN_STATE;
+	newEv->newState = UNKNOWN_STATE;
 	newEv->diagnosed = false;
 	newEv->testNumberDiagnosed = 0;
 	newEv->initTime = time();
 }
 
 // verifica se todos processos diagnosticaram a inicialização sem falhas de todos processos do sistema. Apenas após esta verificação devem ocorrer eventos.
-bool checkProcessStartDiagnosed(TipoProcesso *processos, int n)
+bool checkProcessStartDetection(TipoProcesso *processos, int n)
 {
 	int i, j;
 	for (i = 0; i < n; i++)
 	{
 		for (j = 0; j < n; j++)
 		{
-			if (processos[i].timestamp[j] != 0)
+			if (processos[i].stateVec[j] != 0)
 			{
 				return false;
 			}
@@ -104,15 +48,15 @@ bool checkProcessStartDiagnosed(TipoProcesso *processos, int n)
 	return true;
 }
 
-// verifica se todos processos do sistema diagnosticam um evento
-bool checkEventDiagnosed(TipoProcesso *processos, int n, int eventProcess, int timestamp)
+// verifica se todos processos do sistema detectaram um evento
+bool checkEventFullDetection(TipoProcesso *processos, int n, int eventProcess, int curStateTested)
 {
 	int it;
 	for (it = 0; it < n; it++)
 	{
 		if (status(processos[it].id) == 0)
 		{ // considera-se apenas processos livre de falha
-			if (processos[it].timestamp[eventProcess] != timestamp)
+			if (processos[it].stateVec[eventProcess] != curStateTested)
 			{
 				return (false);
 			}
@@ -130,11 +74,11 @@ void printLogIntro(int n, TipoAgendaEvento *eventos, int numEventos)
 	printf("Tempo de simulação: %4.1f segundos\n", simulationTime);
 	printf("Número de processos: %d\n", n);
 	printf("Intervalo de testes: %4.1f segundos\n", interval);
-	
+
 	printf("\nEstado dos processos: \n");
 	printf("Estado Desconhecido: %d \n", UNKNOWN_STATE);
-	printf("Estado Desconhecido: %d \n", FAIL_STATE);
-	printf("Estado Desconhecido: %d \n", CORRECT_STATE);
+	printf("Estado Correto: %d \n", CORRECT_STATE);
+	printf("Estado Falho: %d \n", FAIL_STATE);
 
 	printf("\nEventos agendados: \n");
 	int it;
@@ -149,14 +93,36 @@ void printLogIntro(int n, TipoAgendaEvento *eventos, int numEventos)
 			printf("Processo %02d recuperação no tempo %4.1f\n", eventos[it].process, eventos[it].time);
 		}
 	}
-	
+
 	printf("******************************************************************************************************************************************\n\n");
 	printf("Tempo \t\tNúmero do teste \tEvento de teste \t\t\t\tStatus do processo \t\t\t\t\t Observação \n");
 }
 
+// Imprime na tela vetor status
+void printStatusVec(TipoProcesso *processos, int n, int tokenID)
+{
+	int it;
+	int stat;
+	printf("[");
+	for (it = 0; it < n; ++it)
+	{
+		stat = processo[tokenID].stateVec[it];
+		if (stat == UNKNOWN_STATE)
+		{
+			printf("\033[0;33m%3d \033[0m", stat);
+		}
+		else if (stat % 2 == CORRECT_STATE)
+			printf("\033[0;32m%3d \033[0m", stat);
+		else
+			printf("\033[0;31m%3d \033[0m", stat);
+	}
+	printf("  ]");
+}
+
+
 // Método retorna quem o processo i deve testar
 //  i = processo testador; s = cluster
-void whoIShouldTest(TipoProcesso *processos, int n, int i, int s, int *nList)
+void getTestingList(TipoProcesso *processos, int n, int i, int s, int *nList)
 {
 	int alvoTest;
 	int k, it, j, iesimoJ;
@@ -175,13 +141,13 @@ void whoIShouldTest(TipoProcesso *processos, int n, int i, int s, int *nList)
 		{ // k -> iteração dos valores de j
 			j = nodesCij->nodes[k];
 			nodesCjs = cis(j, s);
-			// bool firstfaultfree = false;
 
 			for (it = 0; it < POW_2(s - 1); it++)
 			{
 				iesimoJ = nodesCjs->nodes[it];
-				if (processos[i].timestamp[iesimoJ] % 2 == 0 || processos[i].timestamp[iesimoJ] == UNKNOWN_STATE || iesimoJ == i)
-				{ // se livre de erro ou desconhecido
+				if (processos[i].stateVec[iesimoJ] % 2 == 0 || processos[i].stateVec[iesimoJ] == UNKNOWN_STATE || iesimoJ == i)
+				{ 
+					// se livre de erro ou desconhecido
 					if (iesimoJ == i)
 					{
 						nList[j] = 1;
@@ -198,80 +164,87 @@ void executeTest(TipoProcesso *processos, int n, int tokenID, bool started, int 
 {
 	int it;
 	int i = tokenID;	// indice do processo tester;
-	int nodesTotest[n]; // lista de processos que o processo i deve testar
+	int procsToTest[n]; // lista de processos que o processo i deve testar
 	int j;				// processo a ser testado/
 	int jStatus;		// estado de j após test
 
 	int s;											 // define cluster id;
-	whoIShouldTest(processos, n, i, s, nodesTotest); // esta função armazena o valor 1 nas posições que indicam necessidade de teste no vetor nodesTotest
+	getTestingList(processos, n, i, s, procsToTest); // esta função armazena o valor 1 nas posições que indicam necessidade de teste no vetor procsToTest
 
 	for (j = 0; j < n; j++)
 	{
-		if (nodesTotest[j] == 1)
+		if (procsToTest[j] == 1)
 		{
 			jStatus = status(processos[j].id);
 			if (jStatus == 0)
 			{ // j é correto
-				printf("Tempo:%4.1f\ttn:%03d\t\tProcesso %02d testa processo %02d: CORRETO.", time(), testnumber, i, j);
+				printf("Tempo:%4.1f\tN_Teste:%03d\t\tProcesso %02d testa processo %02d: CORRETO.", time(), testnumber, i, j);
 
-				if (processos[i].timestamp[j] % 2 == 1)
+				if (processos[i].stateVec[j] % 2 == FAIL_STATE)
 				{ // Se estado anterior correspondia a falha, atualiza timestamp
-					processos[i].timestamp[j]++;
-					if (started && newEv->novoEvento == false)
+					processos[i].stateVec[j]++;
+					if (started && !newEv->novoEvento)
 					{
 						newEv->novoEvento = true;
 						newEv->processoIdentificador = i;
 						newEv->processoIdentificado = j;
-						newEv->novoEstado = processos[i].timestamp[j];
 						newEv->detectado = true;
+						newEv->newState = processos[i].stateVec[j];
 						newEv->TestRound = roundTest;
-						newEv->impresso = false;
+						newEv->notFirstDetection = false;
 						newEv->diagnosed = false;
 					}
 				}
 				testnumber++;
-				getDiagnosisInfo(processos, n, i, j); // processo testado possui informações recentes, então atualiza seu vetor de estado (timestamp)
-				printf("\tProcess %02d status: ", i);
-				printStatus(processos, n, tokenID);
-				if (started && newEv->novoEvento && !newEv->impresso)
-				{ // se é um novo evento e ainda não foi impresso na tela, deve imprimir
-					printf("\tDetectado evento de recuperação detectado pelo primeiro processo.");
-					newEv->impresso = true;
+				for (int it = 0; it < n; it++)
+				{
+					if (processos[j].stateVec[it] > processos[i].stateVec[it])
+					{ // Se informação obtida ao testar é mais recente, atualiza timestamp
+						processos[i].stateVec[it] = processos[j].stateVec[it];
+					}
+				}
+
+				printf("\t\tProcesso %02d status: ", i);
+				printStatusVec(processos, n, tokenID);
+				if (started && newEv->novoEvento && !newEv->notFirstDetection)
+				{ // se é um novo evento e ainda não foi notFirstDetection na tela, deve imprimir
+					printf("\tDetectado evento de recuperação pela primeira vez.");
+					newEv->notFirstDetection = true;
 				}
 			}
 			else
 			{
-				printf("Tempo:%4.1f\ttn:%03d\t\tProcesso %02d testa processo %02d: FALHO.", time(), testnumber, i, j);
+				printf("Tempo:%4.1f\tN_Teste:%03d\t\tProcesso %02d testa processo %02d: FALHO.", time(), testnumber, i, j);
 				testnumber++;
 				printf("\t\tProcesso %02d status: ", i);
 
-				if (processos[i].timestamp[j] % 2 == 0)
+				if (processos[i].stateVec[j] % 2 == 0)
 				{
-					processos[i].timestamp[j]++;
-					if (started && newEv->novoEvento == false)
+					processos[i].stateVec[j]++;
+					if (started && !newEv->novoEvento)
 					{
 						newEv->novoEvento = true;
+						newEv->detectado = true;
+						newEv->notFirstDetection = false;
+						newEv->diagnosed = false;
 						newEv->processoIdentificador = i;
 						newEv->processoIdentificado = j;
-						newEv->novoEstado = processos[i].timestamp[j];
-						newEv->detectado = true;
+						newEv->newState = processos[i].stateVec[j];
 						newEv->TestRound = roundTest;
-						newEv->impresso = false;
-						newEv->diagnosed = false;
 					}
 				}
-				printStatus(processos, n, tokenID);
-				if (started && newEv->novoEvento && !newEv->impresso)
+				printStatusVec(processos, n, tokenID);
+				if (started && newEv->novoEvento && !newEv->notFirstDetection)
 				{
-					printf("\tFailure event detected for the first time.");
-					newEv->impresso = true;
+					printf("\tEvento de falha detectado pela primeira vez.");
+					newEv->notFirstDetection = true;
 				}
 			}
 
 			// testa se evento foi diagnosticado
-			if (checkEventDiagnosed(processos, n, newEv->processoIdentificado, newEv->novoEstado) && newEv->diagnosed == false)
+			if (checkEventFullDetection(processos, n, newEv->processoIdentificado, newEv->newState) && !newEv->diagnosed )
 			{
-				printf("\tDiagnosis complete.");
+				printf("\t Detecção completa evento no processo %d", newEv->processoIdentificado);
 				newEv->diagnosed = true;
 				newEv->testNumberDiagnosed = testnumber - 1;
 			}
@@ -281,36 +254,16 @@ void executeTest(TipoProcesso *processos, int n, int tokenID, bool started, int 
 	}
 }
 
-// Imprime na tela vetor status
-void printStatus(TipoProcesso *processos, int n, int tokenID)
-{
-	int it;
-	int stat;
-	printf("[");
-	for (it = 0; it < n; ++it)
-	{
-		stat = processo[tokenID].timestamp[it];
-		if (stat == UNKNOWN_STATE)
-		{
-			printf("%3d ", stat);
-		}
-		else if (stat % 2 == 0)
-			printf("%3d ", stat);
-		else
-			printf("%3d ", stat);
-	}
-	printf("  ]");
-}
 
 // Obtém diagnóstico a partir do processo j correto
-void getDiagnosisInfo(TipoProcesso *processos, int n, int i, int j)
+void getDiagnosis(TipoProcesso *processos, int n, int i, int j)
 {
 	int it;
 	for (it = 0; it < n; it++)
 	{
-		if (processos[j].timestamp[it] > processos[i].timestamp[it])
-		{ // Se informação obtida ao testar é mais recente, atualiza timestamp
-			processos[i].timestamp[it] = processos[j].timestamp[it];
+		if (processos[j].stateVec[it] > processos[i].stateVec[it]) // Se informação obtida ao testar é mais recente, atualiza timestamp
+		{ 
+			processos[i].stateVec[it] = processos[j].stateVec[it];
 		}
 	}
 }
@@ -320,11 +273,11 @@ int main(int argc, char *argv[])
 	static int N, // Número de processos
 		token, event, r, it, j, tr, t;
 	tr = 1;											   // indica a rodada de testes;
-	t = UNKNOWN_STATE;											   // utilizada para verificar se houve mudança no tempo de execução e imprimir mensagem de nova rodada de testes
+	t = UNKNOWN_STATE;								   // utilizada para verificar se houve mudança no tempo de execução e imprimir mensagem de nova rodada de testes
 	int maxTestround = (int)simulationTime / interval; // Os testes são executados a cada 10 segundos, portanto é possível obter a quantidade máxima de rodadas de testes em função do tempo de simulação
 	TipoEvento newEvento;							   // armazena informaçoes sobre um novo evento detectado
-	restartEvent(&newEvento);						   // esta função inicializa/reinicializa strutura de armazenamento de eventos.
-	bool nodesStarted = false;
+	resetEvent(&newEvento);						   // esta função inicializa/reinicializa strutura de armazenamento de eventos.
+	bool procStarted = false;
 	int qtdTest[maxTestround]; // armazena quantidade de testes por rodada.
 	int iTest = UNKNOWN_STATE;
 	static char fa_name[5];
@@ -350,16 +303,16 @@ int main(int argc, char *argv[])
 		processo[it].id = facility(fa_name, 1);
 
 		// Inicialização do timestamp de cada nó.
-		processo[it].timestamp = malloc(N * sizeof(int)); // aloca espaço para vetor que armazena estado dos demais processos;
+		processo[it].stateVec = malloc(N * sizeof(int)); // aloca espaço para vetor que armazena estado dos demais processos;
 		for (j = 0; j < N; ++j)
 		{
 			if (it == j)
 			{
-				processo[it].timestamp[j] = 0; //
+				processo[it].stateVec[j] = 0; //
 			}
 			else
 			{
-				processo[it].timestamp[j] = UNKNOWN_STATE; //
+				processo[it].stateVec[j] = UNKNOWN_STATE; //
 			}
 		}
 	}
@@ -391,7 +344,6 @@ int main(int argc, char *argv[])
 	sEvent[3].time = 138.0;
 	sEvent[3].process = 3;
 
-
 	for (it = 0; it < numeroDeEventos; it++)
 	{
 		if (sEvent[it].type == FAULT_TYPE)
@@ -405,7 +357,6 @@ int main(int argc, char *argv[])
 	}
 
 	printLogIntro(N, sEvent, numeroDeEventos); // imprime na tela cabeçalho do log
-
 
 	while (time() < simulationTime)
 	{
@@ -424,53 +375,53 @@ int main(int argc, char *argv[])
 			}
 			if (t < time())
 			{
-				printf("\n************************************************ Start test round %02d ************************************************\n", tr);
+				printf("\n************************************************ Início rodada: %02d ************************************************\n", tr);
 				t = time();
 				tr++;
 			}
 			if (status(processo[token].id) != 0)
 			{
-				printf("time:%4.1f\t\t\tProcess %02d está falho.\n", time(), token);
+				printf("Tempo:%4.1f\t\t\t\tProcesso %02d está falho.\n", time(), token);
 			}
 			else
 			{
-				executeTest(processo, N, token, nodesStarted, tr, &newEvento);
+				executeTest(processo, N, token, procStarted, tr, &newEvento);
 			}
 
 			schedule(TEST, interval, token);
 
 			if (token == N - 1)
 			{
-				printf("**********************************************End of the test round %02d **********************************************\n\n", iTest + 1);
-				if (nodesStarted == false)
+				printf("**********************************************Fim da rodada %02d **********************************************\n\n", iTest + 1);
+				if (!procStarted )
 				{
-					nodesStarted = checkProcessStartDiagnosed(processo, N);
+					procStarted = checkProcessStartDetection(processo, N);
 				}
 				else
 				{
 					if (newEvento.novoEvento)
 					{ // é necessário verificar se evento já foi diagnosticado
-						if (checkEventDiagnosed(processo, N, newEvento.processoIdentificado, newEvento.novoEstado))
+						if (checkEventFullDetection(processo, N, newEvento.processoIdentificado, newEvento.newState))
 						{ // se evento foi diagnosticado
 
-							printf("Test round report:\n");
-							if (newEvento.novoEstado % 2 == 0)
+							printf("Resumo rodada de teste:\n");
+							if (newEvento.newState % 2 == 0)
 							{ // evento de recover
 
-								printf("\t\tDiagnosis complete: process %02d recuperado.\n", newEvento.processoIdentificado);
+								printf("\t\Detecção completa: processo %02d recuperado.\n", newEvento.processoIdentificado);
 							}
 							else
 							{
-								printf("\t\tDiagnosis complete: process %02d falho.\n", newEvento.processoIdentificado);
+								printf("\t\Detecção completa: processo %02d falho.\n", newEvento.processoIdentificado);
 							}
 
-							printf("\t\Latência: %02d round(s).\n", tr + 1 - newEvento.TestRound);
+							printf("\t\Latência: %02d rodada(s).\n", tr + 1 - newEvento.TestRound);
 							printf("\t\Tempo de detecção: %4.1f s.\n", time() - newEvento.initTime);
 
 							printf("\t\tTotal de testes: %02d.\n", newEvento.testNumberDiagnosed - eventTestnumber);
 							printf("\n");
 
-							restartEvent(&newEvento); // reinicia variavel de armazena evento;
+							resetEvent(&newEvento); // reinicia variavel de armazena evento;
 						}
 						else
 						{
@@ -488,25 +439,25 @@ int main(int argc, char *argv[])
 				puts("Não foi possível falhar o processo");
 				exit(1);
 			}
-			printf(" Tempo:%4.1f\t\t\tProcesso %02d CORRETO.\n", time(), token);
+			printf(" Tempo:%4.1f\t\t\tProcesso %02d FALHOU.\n", time(), token);
 			eventTestnumber = testnumber - 1;
 			break;
 
 		case REPAIR:
 			release(processo[token].id, token);
-			printf("Tempo: %4.1f\t\t\tProcesso %02d recuperado. \t\t\tProcess %02d status: ", time(), token, token);
+			printf("Tempo: %4.1f\t\t\tProcesso %02d recuperado. \t\t\tProcesso %02d status: ", time(), token, token);
 			for (it = 0; it < N; it++)
 			{
 				if (it == token)
 				{
-					processo[token].timestamp[it] = 0;
+					processo[token].stateVec[it] = 0;
 				}
 				else
 				{
-					processo[token].timestamp[it] = UNKNOWN_STATE;
+					processo[token].stateVec[it] = UNKNOWN_STATE;
 				}
 			}
-			printStatus(processo, N, token);
+			printStatusVec(processo, N, token);
 			eventTestnumber = testnumber - 1;
 			break;
 		}
