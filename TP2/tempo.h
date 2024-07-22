@@ -5,16 +5,18 @@
 #include <stdio.h>
 
 
-#define simulationTime 201.0 // tempo de duração da simulação
+#define simulationTime 109.0 // tempo de duração da simulação
 #define interval 10.0		 // intervalo de testes
 
 // Eventos
 #define TEST 1
 #define FAULT 2
 #define REPAIR 3
+#define SPANNING_TREE 7
 
 #define FAULT_TYPE 4
 #define REPAIR_TYPE 5
+#define MIN_SPANNING_TREE_TYPE 6
 
 #define UNKNOWN_STATE -1
 #define FAIL_STATE 1
