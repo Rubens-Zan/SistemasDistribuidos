@@ -140,12 +140,12 @@ Tempo:100.0	N_Teste:080		Processo 03 testa processo 02: CORRETO.		Processo 03 st
 Imprimindo arvore Geradora Autonomica Mínima
  Raiz: 0 
  Número de Processos: 4 
- Dimensão: 3 
+ Dimensão: 2 
  
 
- (PROCESSO RAIZ): 0
- (PROCESSO 0 , S=4): Nodos-> 1 2 
- (PROCESSO 1 , S=1): Nodos-> 
- (PROCESSO 2 , S=2): Nodos-> 3 
- (PROCESSO 3 , S=1): Nodos-> 
+ (PROCESSO RAIZ): 		 0
+ (PROCESSO 0 , S=2): Nodos->	 1 2 
+ (PROCESSO 1 , S=1): Nodos->	 
+ (PROCESSO 2 , S=2): Nodos->	 3 
+ (PROCESSO 3 , S=1): Nodos->	 
  **********************************************

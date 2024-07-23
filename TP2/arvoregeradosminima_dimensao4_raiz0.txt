@@ -703,21 +703,21 @@ Imprimindo arvore Geradora Autonomica Mínima
  Dimensão: 4 
  
 
- (PROCESSO RAIZ): 0
- (PROCESSO 0 , S=5): Nodos-> 1 2 4 8 
- (PROCESSO 1 , S=1): Nodos-> 
- (PROCESSO 2 , S=2): Nodos-> 3 
- (PROCESSO 3 , S=1): Nodos-> 
- (PROCESSO 4 , S=3): Nodos-> 5 6 
- (PROCESSO 5 , S=1): Nodos-> 
- (PROCESSO 6 , S=2): Nodos-> 7 
- (PROCESSO 7 , S=1): Nodos-> 
- (PROCESSO 8 , S=4): Nodos-> 9 10 12 
- (PROCESSO 9 , S=1): Nodos-> 
- (PROCESSO 10 , S=2): Nodos-> 11 
- (PROCESSO 11 , S=1): Nodos-> 
- (PROCESSO 12 , S=3): Nodos-> 13 14 
- (PROCESSO 13 , S=1): Nodos-> 
- (PROCESSO 14 , S=2): Nodos-> 15 
- (PROCESSO 15 , S=1): Nodos-> 
+ (PROCESSO RAIZ): 		 0
+ (PROCESSO 0 , S=4): Nodos->	 1 2 4 8 
+ (PROCESSO 1 , S=1): Nodos->	 
+ (PROCESSO 2 , S=2): Nodos->	 3 
+ (PROCESSO 3 , S=1): Nodos->	 
+ (PROCESSO 4 , S=3): Nodos->	 5 6 
+ (PROCESSO 5 , S=1): Nodos->	 
+ (PROCESSO 6 , S=2): Nodos->	 7 
+ (PROCESSO 7 , S=1): Nodos->	 
+ (PROCESSO 8 , S=4): Nodos->	 9 10 12 
+ (PROCESSO 9 , S=1): Nodos->	 
+ (PROCESSO 10 , S=2): Nodos->	 11 
+ (PROCESSO 11 , S=1): Nodos->	 
+ (PROCESSO 12 , S=3): Nodos->	 13 14 
+ (PROCESSO 13 , S=1): Nodos->	 
+ (PROCESSO 14 , S=2): Nodos->	 15 
+ (PROCESSO 15 , S=1): Nodos->	 
  **********************************************

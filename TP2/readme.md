@@ -1,4 +1,16 @@
-# TRABALHO PRÁTICO 2: Árvore Geradora Mínima Autonômica com o vCube
+# Logs
+Tal como exemplificado no artigo https://www.inf.ufpr.br/elias/sisdis/ArvoresAutonomicasVCube.pdf. 
+
+![alt text](image.png)
+
+![alt text](image-2.png)
+
+- Raiz: 7; Dimensões do vCube: 3; Lista de processos falhos: 0;
+![alt text](image-3.png)
+
+- Raiz: 0; Dimensões do vCube: 3; Lista de processos falhos: 1, 2, 4, 7;
+![alt text](image-4.png)
+# ENUNCIADO TRABALHO PRÁTICO 2: Árvore Geradora Mínima Autonômica com o vCube
 
 A árvore geradora mínima é uma estrutura extremente importante em redes e sistemas distribuídos. Ela é a árvore que conecta todos os nodos da rede/sistema com o menor custo. No TP2 vc vai construir uma árvore geradora mínima sobre o vCube do TP1. O algoritmo para construir a árvore é o seguinte:
 

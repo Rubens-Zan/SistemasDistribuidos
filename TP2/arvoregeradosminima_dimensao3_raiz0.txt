@@ -303,13 +303,13 @@ Imprimindo arvore Geradora Autonomica Mínima
  Dimensão: 3 
  
 
- (PROCESSO RAIZ): 0
- (PROCESSO 0 , S=4): Nodos-> 1 2 4 
- (PROCESSO 1 , S=1): Nodos-> 
- (PROCESSO 2 , S=2): Nodos-> 3 
- (PROCESSO 3 , S=1): Nodos-> 
- (PROCESSO 4 , S=3): Nodos-> 5 6 
- (PROCESSO 5 , S=1): Nodos-> 
- (PROCESSO 6 , S=2): Nodos-> 7 
- (PROCESSO 7 , S=1): Nodos-> 
+ (PROCESSO RAIZ): 		 0
+ (PROCESSO 0 , S=3): Nodos->	 1 2 4 
+ (PROCESSO 1 , S=1): Nodos->	 
+ (PROCESSO 2 , S=2): Nodos->	 3 
+ (PROCESSO 3 , S=1): Nodos->	 
+ (PROCESSO 4 , S=3): Nodos->	 5 6 
+ (PROCESSO 5 , S=1): Nodos->	 
+ (PROCESSO 6 , S=2): Nodos->	 7 
+ (PROCESSO 7 , S=1): Nodos->	 
  **********************************************
