@@ -297,19 +297,13 @@ Tempo:100.0	N_Teste:240		Processo 07 testa processo 06: CORRETO.		Processo 07 st
 
 
 **********************************************
-Imprimindo arvore Geradora Autonomica Mínima
+Imprimindo Árvore Geradora Autonomica Mínima
  Raiz: 0 
  Número de Processos: 8 
  Dimensão: 3 
- 
-
- (PROCESSO RAIZ): 		 0
- (PROCESSO 0 , S=3): Nodos->	 1 2 4 
- (PROCESSO 1 , S=1): Nodos->	 
- (PROCESSO 2 , S=2): Nodos->	 3 
- (PROCESSO 3 , S=1): Nodos->	 
- (PROCESSO 4 , S=3): Nodos->	 5 6 
- (PROCESSO 5 , S=1): Nodos->	 
- (PROCESSO 6 , S=2): Nodos->	 7 
- (PROCESSO 7 , S=1): Nodos->	 
+Status: [[0;32m  0 [0m[0;32m  0 [0m[0;32m  0 [0m[0;32m  0 [0m[0;32m  0 [0m[0;32m  0 [0m[0;32m  0 [0m[0;32m  0 [0m  ]
+0 
+1 2 4 
+3 5 6 
+7 
  **********************************************

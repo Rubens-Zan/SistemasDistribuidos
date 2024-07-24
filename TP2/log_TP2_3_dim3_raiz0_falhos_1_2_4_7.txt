@@ -297,15 +297,13 @@ Tempo:100.0				Processo 07 está falho.
 
 
 **********************************************
-Imprimindo arvore Geradora Autonomica Mínima
+Imprimindo Árvore Geradora Autonomica Mínima
  Raiz: 0 
  Número de Processos: 8 
  Dimensão: 3 
 Status: [[0;32m  0 [0m[0;31m  1 [0m[0;31m  1 [0m[0;32m  0 [0m[0;31m  1 [0m[0;32m  0 [0m[0;32m  0 [0m[0;31m  1 [0m  ]
+0 
+3 5 
+6 
 
- (PROCESSO RAIZ): 		 0
- (PROCESSO 0 , S=3): Nodos->	 _ 3 5 
- (PROCESSO 3 , S=2): Nodos->	 _ 
- (PROCESSO 5 , S=3): Nodos->	 _ 6 
- (PROCESSO 6 , S=2): Nodos->	 _ 
  **********************************************

@@ -4,6 +4,7 @@
  * Data da última alteração: 01/05/2024
  * TP1: Implementação do algoritmo VCube2 no ambiente de simulação SMPL
  */
+#define VERBOSE 0
 
 #include <math.h>
 #include "smpl.h"
@@ -328,15 +329,17 @@ void printSpanningAutonomicTree(TipoProcesso *processos, int n, int tokenID,  in
 
 	int s;											 // define cluster id;
 
+	if (VERBOSE == 1){
+		if (!isRootNode)
+			printf("\n (PROCESSO %d , S=%d): Nodos->\t ", index, nChilds+1);
+		else 
+			printf("\n (PROCESSO %d , S=%d): Nodos->\t ", index, nChilds);
 
-	// getTestingListInOrder(processos, n, index, s, procsToTest); // esta função armazena o valor 1 nas posições que indicam necessidade de teste no vetor procsToTest
-	
-	// getTestingListInOrderV2(processos, n, index, s, procsToTestDoubleList);
-	if (!isRootNode)
-		printf("\n (PROCESSO %d , S=%d): Nodos->\t ", index, nChilds+1);
-	else 
-		printf("\n (PROCESSO %d , S=%d): Nodos->\t ", index, nChilds);
-
+	}
+				
+	if (nChilds == 1){
+		printf("\n");
+	}
 	if (nChilds > 0 ){
 		for (int curS = 1; curS <= nChilds ; curS++)
 		{
@@ -357,7 +360,8 @@ void printSpanningAutonomicTree(TipoProcesso *processos, int n, int tokenID,  in
 					}
 					break; 
 				} else if (i+1 == childList->size ) {
-					printf("_ ");
+					if (VERBOSE)
+						("_ ");
 				}
 			}
 		}
@@ -441,35 +445,28 @@ int main(int argc, char *argv[])
 	{
 		schedule(TEST, interval, it);
 	}
-	int numeroDeEventos = 5;
+	int numeroDeEventos = 2;
 
 	/**
 	 */  
 	TipoAgendaEvento *sEvent;
 	sEvent = (TipoAgendaEvento *)malloc(sizeof(TipoAgendaEvento) * numeroDeEventos);
 
-	sEvent[1].type = FAULT_TYPE;
-	sEvent[1].time = 10.0;
-	sEvent[1].process = 1;
+	// sEvent[1].type = FAULT_TYPE;
+	// sEvent[1].time = 10.0;
+	// sEvent[1].process = 0;
 	
-	sEvent[2].type = FAULT_TYPE;
-	sEvent[2].time = 10.0;
-	sEvent[2].process = 2;
+	// sEvent[2].type = FAULT_TYPE;
+	// sEvent[2].time = 10.0;
+	// sEvent[2].process = 2;
 
-	sEvent[3].type = FAULT_TYPE;
-	sEvent[3].time = 10.0;
-	sEvent[3].process = 4;
+	// sEvent[3].type = FAULT_TYPE;
+	// sEvent[3].time = 10.0;
+	// sEvent[3].process = 4;
 
-	sEvent[4].type = FAULT_TYPE;
-	sEvent[4].time = 10.0;
-	sEvent[4].process = 7;
-
-	// sEvent[2].type = REPAIR_TYPE;
-	// sEvent[2].time = 40.0;
-	// sEvent[2].process = 0;
-	// sEvent[3].type = REPAIR_TYPE;
-	// sEvent[3].time = 50.0;
-	// sEvent[3].process = 3;
+	// sEvent[4].type = FAULT_TYPE;
+	// sEvent[4].time = 10.0;
+	// sEvent[4].process = 7;
 
 	sEvent[0].process = 0;
 	sEvent[0].time = 105.0;
@@ -597,7 +594,7 @@ int main(int argc, char *argv[])
 		
 		case SPANNING_TREE:
 			printf("\n\n**********************************************\n");
-			printf("Imprimindo arvore Geradora Autonomica Mínima\n ");
+			printf("Imprimindo Árvore Geradora Autonomica Mínima\n ");
 			
 			int dimension = (int)log2(N);
 
@@ -609,8 +606,9 @@ int main(int argc, char *argv[])
 			printf("\n"); 
 			// executeTest(processo, N, token, procStarted, tr, &newEvento);
 			// printf("%d \n", token);
-			printf("\n (PROCESSO RAIZ): \t\t %d", token);
-
+			if (VERBOSE)
+				printf("\n (PROCESSO RAIZ): \t\t %d", token);
+			printf("%d \n",token );
 			printedNodes[token] = 1;
 			printSpanningAutonomicTree(processo, N, token, nChildsToPrint, printedNodes, 1);
 			printf("\n **********************************************\n");
