@@ -39,6 +39,7 @@
 ![alt text](image-13.png)
 
 5. **Raiz: 0; Dimensões do vCube: 4; nenhum processo falho.**
+![alt text](image.png)
 
 ![alt text](image-9.png)
 

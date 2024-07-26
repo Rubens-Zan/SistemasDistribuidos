@@ -5,7 +5,7 @@
  * TP2: Implementação Impressão árvore Geradora Autonômica Mínima usando estrutura VCube no ambiente de simulação SMPL
  */
 
-#define VERBOSE 1
+#define VERBOSE 0
 
 #include <math.h>
 #include "smpl.h"
@@ -397,28 +397,28 @@ int main(int argc, char *argv[])
 	{
 		schedule(TEST, interval, it);
 	}
-	int numeroDeEventos = 5;
+	int numeroDeEventos = 2;
 
 	/**
 	 */  
 	TipoAgendaEvento *sEvent;
 	sEvent = (TipoAgendaEvento *)malloc(sizeof(TipoAgendaEvento) * numeroDeEventos);
 
-	sEvent[1].type = FAULT_TYPE;
-	sEvent[1].time = 10.0;
-	sEvent[1].process = 0;
+	// sEvent[1].type = FAULT_TYPE;
+	// sEvent[1].time = 10.0;
+	// sEvent[1].process = 0;
 	
-	sEvent[2].type = FAULT_TYPE;
-	sEvent[2].time = 10.0;
-	sEvent[2].process = 2;
+	// sEvent[2].type = FAULT_TYPE;
+	// sEvent[2].time = 10.0;
+	// sEvent[2].process = 2;
 
-	sEvent[3].type = FAULT_TYPE;
-	sEvent[3].time = 10.0;
-	sEvent[3].process = 4;
+	// sEvent[3].type = FAULT_TYPE;
+	// sEvent[3].time = 10.0;
+	// sEvent[3].process = 4;
 
-	sEvent[4].type = FAULT_TYPE;
-	sEvent[4].time = 10.0;
-	sEvent[4].process = 7;
+	// sEvent[4].type = FAULT_TYPE;
+	// sEvent[4].time = 10.0;
+	// sEvent[4].process = 7;
 
 	sEvent[0].process = 0;
 	sEvent[0].time = 105.0;
