@@ -1,42 +1,56 @@
-# Logs
-Tal como exemplificado no artigo https://www.inf.ufpr.br/elias/sisdis/ArvoresAutonomicasVCube.pdf. 
+# Trabalho Prático 2: Árvore Geradora Mínima Autonômica com o vCube
+## Autor: Rubens Zandomenighi Laszlo GRR20206147
+
+## Motivação trabalho
+- A árvore que conecta todos os nodos da rede/sistema com o menor custo.
 
 ![alt text](image.png)
 
-![alt text](image-2.png)
+## Implementação 
+### Funções implementadas: 
+- ```printSpanningAutonomicTree ``` : Função responsável por imprimir a árvore geradora mínima autonômica, sendo chamada conforme evento 
+### Pré requisitos criados para execução da função
+- Criado novo evento referente a impressão da árvore, dessa forma me permitiu durante os testes do trabalho, refinar a função conforme os testes executados. No caso dos logs finais do programa, conforme solicitado pelo professor Elias, estou adicionando o evento de impressão da árvore 1x, sendo ao final do programa.
 
-- Raiz: 7; Dimensões do vCube: 3; Lista de processos falhos: 0;
-![alt text](image-3.png)
+## Casos de teste
+1. **Raiz: 0; Dimensões do vCube: 2; nenhum processo falho;**
 
-- Raiz: 0; Dimensões do vCube: 3; Lista de processos falhos: 1, 2, 4, 7;
-![alt text](image-4.png)
-# ENUNCIADO TRABALHO PRÁTICO 2: Árvore Geradora Mínima Autonômica com o vCube
+![alt text](image-5.png)
 
-A árvore geradora mínima é uma estrutura extremente importante em redes e sistemas distribuídos. Ela é a árvore que conecta todos os nodos da rede/sistema com o menor custo. No TP2 vc vai construir uma árvore geradora mínima sobre o vCube do TP1. O algoritmo para construir a árvore é o seguinte:
+![alt text](image-10.png)
 
-Algoritmo Árvore Geradora Mínima Autonômica sobre o vCube
-Recebe como entrada: Raiz da árvore, Dimensão do vCube, Lista de processos falhos
+2. **Raiz: 0; Dimensões do vCube: 3; nenhum processo falho;**
+- Testes para geração da árvore geradora 
 
-Imprima(raiz)
+![alt text](image-6.png)
 
-Seja i o primeiro processo correto de C(raiz, s-filho), s-filho = 1, 2, ..., Dimensão do vCube (se houver algum): Imprima(i)
+![alt text](image-11.png)
 
-A raiz envia o s-filho correspondente para cada filho i
+3. **Raiz: 0; Dimensões do vCube: 3; Lista de processos falhos: 1, 2, 4, 7;**
 
-Se i recebe s-filho = 1
-Então esse filho é folha, acabou!
-Senão /* s-filho > 1 */
-      o filho i envia s para o primeiro processo j correto de C(filho,s), s = 1, 2, ..., s-filho -1 (se houver algum): Imprima(j)
+![alt text](image-7.png)
 
-Repita para cada um dos filhos, até todos serem folhas e acabarem a execução do algoritmo. 
-Fim Algoritmo.
+![alt text](image-12.png)
 
-Os logs devem ter obrigatoriamente as árvores geradoras mímimas para os seguintes casos:
+4. **Raiz: 7; Dimensões do vCube: 3; Lista de processos falhos: 0;**
 
-    Raiz: 0; Dimensões do vCube: 2; nenhum processo falho;
-    Raiz: 0; Dimensões do vCube: 3; nenhum processo falho;
-    Raiz: 0; Dimensões do vCube: 3; Lista de processos falhos: 1, 2, 4, 7;
-    Raiz: 7; Dimensões do vCube: 3; Lista de processos falhos: 0;
-    Raiz: 0; Dimensões do vCube: 4; nenhum processo falho. 
+![alt text](image-8.png)
 
-Atenção: a data para disponibilizar o trabalho é 25 de julho de 2024 (não serão aceitos trabalhos fora do prazo!) 
+![alt text](image-13.png)
+
+5. **Raiz: 0; Dimensões do vCube: 4; nenhum processo falho.**
+
+![alt text](image-9.png)
+
+![alt text](image-14.png)
+
+## Código Fonte
+Disponível em: 
+
+## Logs: 
+Disponíveis em:
+1. Link Caso 1 
+2. Link Caso 2
+3. Link Caso 3
+4. Link Caso 4
+5. Link Caso 5

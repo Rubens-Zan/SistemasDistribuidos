@@ -4,6 +4,7 @@
  * Data da última alteração: 01/05/2024
  * TP1: Implementação do algoritmo VCube2 no ambiente de simulação SMPL
  */
+
 #define VERBOSE 0
 
 #include <math.h>
